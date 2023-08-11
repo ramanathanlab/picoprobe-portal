@@ -18,3 +18,17 @@ python -m venv env
 source env/bin/activate
 make install
 ```
+
+## Initial Setup
+```bash
+django-admin startproject picoprobe_portal
+```
+
+## TOOD
+Run server
+```
+./manage.py runserver
+```
+
+- Copy RPL templates
+- Copy RPL URLs

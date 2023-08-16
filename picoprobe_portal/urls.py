@@ -14,15 +14,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
 from globus_portal_framework.urls import register_custom_index
-
-# TODO: What does this do? rpl_portal has it (copied below).
+from picoprobe_portal import views
 app_name = "picoprobe-index"
-# TODO: What does this do? rpl_portal has it (copied below).
 register_custom_index("picoprobe_index", ["picoprobe"])
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-]
+urlpatterns = []
+
+

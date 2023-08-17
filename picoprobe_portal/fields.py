@@ -1,14 +1,9 @@
-import os
-from urllib.parse import urlsplit, urlunsplit, urlencode
-import copy
-import re
+from urllib.parse import urlunsplit
 
 def title(result):  
-    if "project_metadata" in result[0]:
-        t = result[0]["project_metadata"]
-        if not ("experiment" in t):
-            """The title for this Globus Search subject"""
-            return result[0]["dc"]["titles"][0]["title"]
-        return result[0]["project_metadata"]["experiment"]  
-    return result[0]["experiment"]
+    return result[0]['dc']['titles'][0]['title']
     
+def display_image(result):
+    path = result[0]['hyperspectral_image'].replace('/lus/eagle/projects/APSDataAnalysis/PICOPROBE/','')
+    new_url = urlunsplit(("https","g-ea1c3.fd635.8443.data.globus.org", path, "", ""))
+    return new_url

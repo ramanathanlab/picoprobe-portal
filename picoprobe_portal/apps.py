@@ -25,23 +25,16 @@ SEARCH_INDEXES = {
             ("title", fields.title),
             "dc",
             "files",
+            ("display_image", fields.display_image),
+
         ],
         "facets": [
-            {
-                "name": "Creator",
-                "field_name": "dc.creators.creatorName",
-            },  
             {
                 "name": "Dates",
                 "field_name": "dc.dates.date",
                 "type": "date_histogram",
                 "date_interval": "day",
-            },
-              {
-                  "name": "Experiment Type",
-                  "field_name": "title",
-    
-              }
+            }
         ],
         "facet_modifiers": [],
         "sort" : [

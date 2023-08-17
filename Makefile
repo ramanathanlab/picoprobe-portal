@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 package_name = picoprobe_portal
-extra_folders = tests/ examples/ 
+extra_folders = tests/
 isort = isort $(package_name) $(extra_folders)
 black = black --target-version py37 $(package_name) $(extra_folders)
 flake8 = flake8 $(package_name)/ $(extra_folders)

@@ -1,4 +1,5 @@
 import os
+
 from django.apps import AppConfig
 
 from picoprobe_portal import fields
@@ -36,18 +37,13 @@ SEARCH_INDEXES = {
             }
         ],
         "facet_modifiers": [],
-        "sort" : [
-             {'field_name': 'dc.dates.date', 
-                    'order': 'desc'
-            }
-        ],
+        "sort": [{"field_name": "dc.dates.date", "order": "desc"}],
         "default_filters": [
             {
                 "type": "match_all",
                 "field_name": "result.exp_type",
                 "values": [],
             }
-        ]
-        
+        ],
     }
 }

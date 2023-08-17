@@ -1,6 +1,6 @@
 import logging
-from django.shortcuts import render
 
+from django.shortcuts import render
 from globus_portal_framework.views.generic import SearchView
 
 log = logging.getLogger(__name__)

@@ -15,10 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from globus_portal_framework.urls import register_custom_index
-from picoprobe_portal import views
+
 app_name = "picoprobe-index"
 register_custom_index("picoprobe_index", ["picoprobe"])
 
 urlpatterns = []
-
-

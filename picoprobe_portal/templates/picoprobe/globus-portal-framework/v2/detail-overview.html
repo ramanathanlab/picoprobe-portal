@@ -1,0 +1,47 @@
+{% extends 'globus-portal-framework/v2/detail-overview.html' %}
+
+
+{% block detail_body %}
+
+<div class="row">
+
+
+  <div class="col-md-12">
+    {% block image %}
+    <img src={{display_image}} width="100%" height="100%"
+        style="margin:auto; padding-bottom:10px">
+    {% endblock %}
+</div>
+
+<div class="col-md-12">
+  {% block sample_metadata %}
+
+  {% with all|first as project_metadata %}
+  <table class="table table-striped table-bordered">
+    <tbody>
+    {% block detail_general_metadata %}
+    {% for sec_key, sec_value in project_metadata.experiment_metadata.items %}
+    <tr>
+      <td>
+        {{sec_key}}
+      </td> 
+      <td>
+        {% for key, value in sec_value.items %}
+          {{key}} : {{value}}
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+    {% endblock %}
+    </tbody>
+  </table>             
+  {% endwith %}
+  {% endblock %}
+</div>
+  
+</div>
+
+
+
+
+{% endblock %}

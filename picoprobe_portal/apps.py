@@ -15,8 +15,8 @@ SEARCH_INDEXES = {
     "picoprobe": {
         "uuid": "6077d057-989d-41e2-b60b-91fe001f0687",
         "name": "PicoProbe Index",
-        "group": "dda56f31-53d1-11ed-bd8b-0db7472df7d6",
-        "collection": "d8e16504-eaab-44b6-aa56-ff7d1b6040a3",
+        "group": "a695bbc6-3ad2-11ee-88ba-27cb577dbd96",
+        "collection": "300ef593-e55e-4bc1-ab21-6d26d82c3b99",
         "base_templates": "globus-portal-framework/v2/",
         "template_override_dir": "picoprobe",
         "tabbed_project": False,

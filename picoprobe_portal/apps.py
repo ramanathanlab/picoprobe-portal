@@ -26,7 +26,6 @@ SEARCH_INDEXES = {
             "dc",
             "files",
             ("display_image", fields.display_image),
-
         ],
         "facets": [
             {

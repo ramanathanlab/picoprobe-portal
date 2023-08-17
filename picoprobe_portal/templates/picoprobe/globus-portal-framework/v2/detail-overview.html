@@ -2,7 +2,6 @@
 
 
 {% block detail_body %}
-<h3 class="text-center mb-5">Sample {{dc.titles.0.title}}</h3>
 
 <div class="row">
 
@@ -21,13 +20,16 @@
   <table class="table table-striped table-bordered">
     <tbody>
     {% block detail_general_metadata %}
-    {% for key, value in project_metadata.items %}
+    {% for sec_key, sec_value in project_metadata.experiment_metadata.items %}
     <tr>
-      {% if key == "experiment_metadata"  %}
       <td>
-        {{value}}
+        {{sec_key}}
+      </td> 
+      <td>
+        {% for key, value in sec_value.items %}
+          {{key}} : {{value}}
+        {% endfor %}
       </td>
-      {% endif %}
     </tr>
     {% endfor %}
     {% endblock %}

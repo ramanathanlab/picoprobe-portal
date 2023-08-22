@@ -13,7 +13,8 @@ class PicoProbeIndexConfig(AppConfig):
 
 SEARCH_INDEXES = {
     "picoprobe": {
-        "uuid": "6077d057-989d-41e2-b60b-91fe001f0687",
+        "uuid": "5e2dd679-6e3f-4b4d-b255-87ccc326aea7",
+        # "uuid": "6077d057-989d-41e2-b60b-91fe001f0687",
         "name": "PicoProbe Index",
         "group": "a695bbc6-3ad2-11ee-88ba-27cb577dbd96",
         "collection": "300ef593-e55e-4bc1-ab21-6d26d82c3b99",
